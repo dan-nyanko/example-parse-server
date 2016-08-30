@@ -1,0 +1,7 @@
+Hi {{username}},
+
+This is a test.
+
+
+The SuperCoolApp Team
+https://supercoolapp.io

@@ -5,6 +5,7 @@ import { resolve } from 'path';
 
 process.env.VERBOSE=true;
 
+// The other settings are defined in settings.json which is .gitignored
 settings.emailAdapter.options.templates = {
   passwordResetEmail: {
     subject: 'Reset your password',
@@ -19,6 +20,11 @@ settings.emailAdapter.options.templates = {
     pathHtml: resolve(__dirname, 'templates/verification_email.html'),
     callback: (user) => { return { username: user.get('username') }},
     // Now you can use {{username}} in your templates
+  },
+  testEmail: {
+    subject: 'Test email',
+    pathPlainText: resolve(__dirname, 'templates/test_email.txt'),
+    pathHtml: resolve(__dirname, 'templates/test_email.html'),
   },
 };
 
